@@ -1,41 +1,36 @@
+body {
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
 table {
-  width: 60%;
-  margin: 40px auto;
-  border-collapse: separate !important;  /* <— critical fix */
-  border-spacing: 0;                     /* <— avoid gaps */
-}
-
-/* direct styling on table cells */
-th, td {
-  border: 1px solid #ccc !important;      /* Cypress checks for this */
-  border-radius: 5px !important;          /* force rendering */
-  padding: 8px !important;                /* exactly as test expects */
+  border-collapse: separate; /* ❗ Needed so border-radius is visible */
+  border-spacing: 0;
+  width: 400px;
   text-align: left;
-  background-clip: padding-box;           /* ensures visible radius */
 }
 
-/* alternate row colors */
+/* Style for both header and cells */
+th, td {
+  border: 1px solid #ccc;
+  border-radius: 5px; /* ✅ Cypress will now read this as 5px */
+  padding: 8px; /* ✅ must be exactly 8px */
+}
+
+/* Alternate row colors */
 tbody tr:nth-child(odd) td {
-  background-color: #f2f2f2 !important;
+  background-color: #f2f2f2;
 }
-
 tbody tr:nth-child(even) td {
-  background-color: #ffffff !important;
+  background-color: #ffffff;
 }
 
-/* optional cosmetic tweak for rounded outer corners */
-table tr:first-child th:first-child {
-  border-top-left-radius: 5px !important;
-}
-
-table tr:first-child th:last-child {
-  border-top-right-radius: 5px !important;
-}
-
-table tr:last-child td:first-child {
-  border-bottom-left-radius: 5px !important;
-}
-
-table tr:last-child td:last-child {
-  border-bottom-right-radius: 5px !important;
+/* Optional: give header a subtle background */
+th {
+  background-color: #eaeaea;
+  font-weight: bold;
 }
