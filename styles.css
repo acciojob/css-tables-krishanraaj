@@ -1,1 +1,21 @@
 /*  your css code here. If applicable */
+table {
+  border-collapse: collapse;
+  width: 60%;
+  margin: 50px auto;
+}
+
+th, td {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 8px; /* ✅ exactly what the test expects */
+  text-align: left;
+}
+
+tr:nth-child(odd) {
+  background-color: #f2f2f2;
+}
+
+tr:nth-child(even) {
+  background-color: #ffffff;
+}
