@@ -1,69 +1,85 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Styled Table</title>
-    <style>
-        table {
-            border-collapse: separate; /* Keep borders separate for border-radius */
-            border-spacing: 0;         /* Remove default spacing */
-            width: 80%;                /* Optional: table width */
-            margin: 20px auto;         /* Center table */
-            font-family: Arial, sans-serif;
-        }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Styled Table</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #fafafa;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
 
-        th, td {
-            border: 1px solid #ccc;   /* Border around cells */
-            border-radius: 5px;       /* Rounded corners */
-            padding: 0.5rem;          /* Space inside cells */
-            text-align: left;
-        }
+    table {
+      width: 60%;
+      border-collapse: separate; /* Important for border-radius to work */
+      border-spacing: 0;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      background-color: white;
+      border-radius: 10px;
+      overflow: hidden; /* Keeps rounded corners clean */
+    }
 
-        tr:nth-child(odd) {
-            background-color: #f2f2f2; /* Odd row background */
-        }
+    th, td {
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      padding: 0.5rem 1rem;
+      text-align: left;
+    }
 
-        tr:nth-child(even) {
-            background-color: #ffffff; /* Even row background */
-        }
+    th {
+      background-color: #eaeaea;
+      font-weight: bold;
+    }
 
-        th {
-            background-color: #d9d9d9;  /* Optional: header background */
-        }
-    </style>
+    tr:nth-child(odd) {
+      background-color: #f2f2f2;
+    }
+
+    tr:nth-child(even) {
+      background-color: #ffffff;
+    }
+
+    tr:hover {
+      background-color: #e0e0e0; /* Subtle hover effect */
+    }
+  </style>
 </head>
 <body>
-    <table>
-        <thead>
-            <tr>
-                <th>Item</th>
-                <th>Quantity</th>
-                <th>Price</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>Apple</td>
-                <td>10</td>
-                <td>$5</td>
-            </tr>
-            <tr>
-                <td>Banana</td>
-                <td>15</td>
-                <td>$7</td>
-            </tr>
-            <tr>
-                <td>Orange</td>
-                <td>20</td>
-                <td>$10</td>
-            </tr>
-            <tr>
-                <td>Mango</td>
-                <td>5</td>
-                <td>$8</td>
-            </tr>
-        </tbody>
-    </table>
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Age</th>
+        <th>City</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>John Doe</td>
+        <td>28</td>
+        <td>New York</td>
+      </tr>
+      <tr>
+        <td>Jane Smith</td>
+        <td>32</td>
+        <td>Los Angeles</td>
+      </tr>
+      <tr>
+        <td>Michael Brown</td>
+        <td>45</td>
+        <td>Chicago</td>
+      </tr>
+      <tr>
+        <td>Emily Davis</td>
+        <td>27</td>
+        <td>Houston</td>
+      </tr>
+    </tbody>
+  </table>
 </body>
 </html>
